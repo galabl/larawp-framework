@@ -1,0 +1,1 @@
+> **Note:** This repository contains the core code of the LaraWp framework. If you want to create a WordPress plugin using LaraWp, visit the main [LaraWp repository](https://github.com/galabl/larawp).
