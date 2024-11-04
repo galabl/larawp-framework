@@ -1,0 +1,15 @@
+{
+  "name": "galabl/larawp-framework",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "LaraWp\\App\\": "app/",
+      "LaraWp\\Includes\\": "includes/",
+      "LaraWp\\Database\\": "database/"
+    }
+  },
+  "description": "",
+  "require": {
+    "woocommerce/action-scheduler": "^3.8"
+  }
+}
