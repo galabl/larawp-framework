@@ -1,6 +1,7 @@
 {
   "name": "galabl/larawp-framework",
   "version": "1.0.0",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "LaraWp\\App\\": "app/",
@@ -8,8 +9,16 @@
       "LaraWp\\Database\\": "database/"
     }
   },
-  "description": "",
+  "description": "LaraWP Framework",
+  "prefer-stable": true,
+  "minimum-stability": "stable",
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
   "require": {
+    "php": "^8.1",
     "woocommerce/action-scheduler": "^3.8"
   }
 }
