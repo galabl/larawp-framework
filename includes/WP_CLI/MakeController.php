@@ -10,7 +10,7 @@ class MakeController extends WP_CLI_Command {
     protected string $namespace;
     public function __construct( $namespace ) {
         $this->namespace = $namespace . "\App\Http\Controllers";
-        WP_CLI::add_command( 'larawp make:controller', [ $this, 'create' ] );
+        WP_CLI::add_command( 'larawp lara_wp make:controller', [ $this, 'create' ] );
     }
 
     /**

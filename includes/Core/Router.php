@@ -13,14 +13,38 @@ class Router {
         $this->container = $container;
     }
 
+    /**
+     * Register POST request
+     *
+     * @param $action
+     * @param $callback
+     * @param $type
+     * @param $middleware
+     *
+     * @return void
+     */
     public function post($action, $callback, $type = 'http', $middleware = 'admin') {
         $this->routes[] = ['method' => 'POST', 'action' => $action, 'callback' => $callback, 'type' => $type, 'middleware' => $middleware];
     }
 
+    /**
+     * Register GET request
+     *
+     * @param $action
+     * @param $callback
+     * @param $type
+     * @param $middleware
+     *
+     * @return void
+     */
     public function get($action, $callback, $type = 'http', $middleware = 'admin') {
         $this->routes[] = ['method' => 'GET', 'action' => $action, 'callback' => $callback, 'type' => $type, 'middleware' => $middleware];
     }
 
+    /**
+     * Register HTTP requests via WordPress add_action(wp_ajax, admin_post)
+     * @return void
+     */
     public function register() {
         foreach ($this->routes as $route) {
             $action_name = $route['action'];

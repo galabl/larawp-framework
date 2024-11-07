@@ -10,7 +10,7 @@ class MakeModel extends WP_CLI_Command {
     protected string $namespace;
     public function __construct( $namespace ) {
         $this->namespace = $namespace . "\App\Models";
-        WP_CLI::add_command( 'larawp make:model', [ $this, 'create' ] );
+        WP_CLI::add_command( 'larawp lara_wp make:model', [ $this, 'create' ] );
     }
 
     /**
@@ -23,6 +23,7 @@ class MakeModel extends WP_CLI_Command {
      * : (Optional) Table name. Default, it tries to match table name from model class name ( Example: User will resolve to `users` )
      *
      * @param array $args
+     * @param array $assoc_args
      *
      * @subcommand make:model
      */

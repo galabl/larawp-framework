@@ -15,7 +15,7 @@ class MakeMigration extends WP_CLI_Command {
         $this->namespace = $namespace . "\Database\Migrations";
         $this->blueprint = "$namespace\Includes\Database\Blueprint";
         $this->schema = "$namespace\Includes\Database\Schema";
-        WP_CLI::add_command( 'larawp make:migration', [ $this, 'create' ] );
+        WP_CLI::add_command( 'larawp lara_wp make:migration', [ $this, 'create' ] );
     }
 
     /**

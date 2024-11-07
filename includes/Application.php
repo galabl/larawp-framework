@@ -24,6 +24,14 @@ final class Application extends Container {
         $this->get(Job::class)->handle();
     }
 
+    public function register_action( $action, $controller, $method, $priority = 10, $args = 1 ) {
+        add_action( $action, [ $this->get($controller), $method ], $priority, $args ) ;
+    }
+
+    public function register_filter( $filter, $controller, $method, $priority = 10, $args = 1 ) {
+        add_filter( $filter, [ $this->get($controller), $method ], $priority, $args ) ;
+    }
+
     public function get_instance() {
         return $this;
     }
